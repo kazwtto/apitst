@@ -1,4 +1,4 @@
-app = "cakto-webhook"
+app = "viaolimpicaapi"
 primary_region = "gru"
 
 [build]
