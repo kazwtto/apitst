@@ -97,10 +97,11 @@ async function removeEmail(email) {
 
 app.post('/webhook/cakto', async (req, res) => {
     try {
-        const { event, order, customer, product, subscription } = req.body;
-        const email = customer?.email;
+        console.log(req.body)
+        const { event, data } = req.body;
+        const email = data?.customer?.email;
 
-        console.log(`Webhook received: ${event}`);
+        console.log(`Webhook received: ${event}`, { email });
 
         switch (event) {
             case 'purchase_approved':
